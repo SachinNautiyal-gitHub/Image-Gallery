@@ -4,7 +4,10 @@ import React, { useEffect, useState } from "react";
 
 const AppContext = React.createContext();
 
-const Api = `https://api.unsplash.com/photos/random?&client_id=uWpCCUwSyEoZp91iZ9WzCeN70sYRU3zD4886425Ugas&count=30`;
+require('dotenv').config();
+
+// const Api = `https://api.unsplash.com/photos/random?&client_id=uWpCCUwSyEoZp91iZ9WzCeN70sYRU3zD4886425Ugas&count=30`;
+const Api = process.env.REACT_APP_APIKEY;
 
 const AppProvider = ({ children }) => {
 
